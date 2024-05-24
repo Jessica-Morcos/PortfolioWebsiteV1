@@ -62,28 +62,13 @@ h5{
     font-size: small;
 }
 
-.navContainer {
-    width: 85%;
-    margin: 0 auto;
-    border-bottom-left-radius: 15px; /* Adjust the radius as needed */
-    border-bottom-right-radius: 15px; /* Adjust the radius as needed */
-}
+
 
 .about-me-container {
     width: 85%;
     margin: 0 auto 5%;
 }
 
-.navbar-nav .nav-link {
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-/* Remove the thick grey border */
-.navbar-toggler:focus {
-    outline: none;
-    box-shadow: none;
-}
 
 .scramble {
     cursor: pointer;
@@ -112,21 +97,6 @@ h5{
     color: #ff4081;
 }
 
-/* Adjust size and color */
-.navbar-toggler {
-    border: none;
-    padding: 0.25rem 0.75rem;
-}
-
-.navbar-toggler-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-.navbar-brand img {
-    height: 32px;
-    margin-right: 0; /* Adjust size as needed */
-}
 
 .about img {
     border-bottom-left-radius: 15px;
@@ -152,19 +122,36 @@ h5{
 }
 
 .polaroid-card img {
-    margin: 5px auto;
     max-width: 100%;
     height: auto;
 }
 
 .polaroid-card .card-body {
     padding: 10px;
-    height: auto;
+    height: 180px; /* Set a fixed height for uniformity */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between; /* Adjust to evenly space items */
     align-items: center;
     text-align: center;
+    position: relative;
+}
+
+.polaroid-card .card-body .githubLogo {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    bottom: 15px; /* Adjust this value to align the logo */
+}
+
+.polaroid-card .card-body h5 {
+    color: black;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.polaroid-card .card-body a {
+    position: relative;
+    bottom: 15px; /* Adjust this value to move the link down */
 }
 
 .polaroid-card .card-title {

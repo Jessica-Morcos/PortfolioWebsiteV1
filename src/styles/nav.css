@@ -1,0 +1,76 @@
+/* Define Roboto Slab */
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab/static/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Define League Spartan */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/League_Spartan/static/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Define Space Mono */
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+.navContainer {
+    width: 85%;
+    margin: 0 auto;
+    border-bottom-left-radius: 15px; /* Adjust the radius as needed */
+    border-bottom-right-radius: 15px; /* Adjust the radius as needed */
+}
+
+.navbar-nav .nav-link {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* Remove the thick grey border */
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+/* Adjust size and color */
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.75rem;
+}
+
+.navbar-toggler-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.navbar-brand img {
+    height: 32px;
+    margin-right: 0; /* Adjust size as needed */
+}
