@@ -46,17 +46,41 @@
 body {
     background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
     color: #ddd;
-    font-family: 'League Spartan', sans-serif ;
+    font-family: 'League Spartan', sans-serif;
+    text-align: center;
+}
+
+h5 {
+    font-family: 'Space Mono', monospace;
+}
+
+.skills-container {
+    margin-top: 50px;
+}
+
+.skills-section {
+    margin-bottom: 40px;
+}
+
+.skills-section h4 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.skills-section ul {
+    font-size: 1.5rem;
+}
+
+.separator {
+    border-top: 1px solid #ddd;
+    width: 80%;
+    margin: 20px auto;
 }
 
 p {
     color: darkgrey;
 }
-h5{
-   
-    font-family: 'Space Mono', monospace;
- 
-}
+
 
 .projects-container p{
     font-size: small;
