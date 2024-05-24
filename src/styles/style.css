@@ -1,22 +1,71 @@
 body {
-    background: linear-gradient(109.6deg, rgb(78, 62, 255) 11.2%, rgb(164, 69, 255) 91.1%);
+    background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
+    color: #ddd;
+}
+
+body p {
+    color: darkgrey;
 }
 
 .navContainer {
-    width: 75%;
+    width: 85%;
     margin: 0 auto;
     border-bottom-left-radius: 15px; /* Adjust the radius as needed */
     border-bottom-right-radius: 15px; /* Adjust the radius as needed */
 }
 
 .about-me-container {
-    width: 75%;
+    width: 85%;
     margin: 0 auto 5%;
 }
 
 .navbar-nav .nav-link {
     margin-left: 15px;
     margin-right: 15px;
+}
+
+/* Remove the thick grey border */
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.scramble {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: all 0.10s ease-in-out;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.thumbtack {
+    position: absolute;
+    top: 15px; /* Initial position */
+    left: 60%;
+    transform: translateX(-60%);
+    width: 75px; /* Adjust width */
+    height: 50px; /* Adjust height */
+    z-index: 1;
+    transition: top 0.5s linear, left 0.5s linear, transform 0.5s linear;
+}
+
+.scramble:hover,
+.scramble:active {
+    color: #ff4081;
+}
+
+/* Adjust size and color */
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.75rem;
+}
+
+.navbar-toggler-icon {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .navbar-brand img {
@@ -30,7 +79,7 @@ body {
 }
 
 .projects-container {
-    width: 75%;
+    width: 85%;
     margin: 0 auto 5%;
 }
 
@@ -69,4 +118,27 @@ body {
 
 .polaroid-card .card-text {
     margin-bottom: 1rem;
+}
+
+/* New CSS for the hover effect */
+.photo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.portfolio-photo {
+    transition: transform 0.5s linear, filter 1s ease-in-out;
+    position: relative;
+    filter: grayscale(100%);
+}
+
+.photo-container:hover .portfolio-photo {
+    transform: translate(-10px, -10px); /* Move top left */
+    filter: grayscale(0%);
+}
+
+.photo-container:hover .thumbtack {
+    top: 10px; /* Move up */
+    left: calc(60% + 10px); /* Move right */
+    transform: translate(-60%, -10px); /* Move up */
 }
