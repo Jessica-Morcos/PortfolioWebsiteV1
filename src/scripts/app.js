@@ -13,10 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const maxLength = Math.max(originalText.length, newWord.length);
             let iterations = 0;
 
+            element.style.width = `${maxLength + 2}ch`;
+
             const interval = setInterval(() => {
                 element.textContent = newWord.split('').map((char, index) => {
                     if (index < iterations) {
-                        return newWord[index];
+                        return newWord[index]; 
                     }
                     return String.fromCharCode(33 + Math.random() * 94);
                 }).join('');
@@ -30,12 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }, scrambleInterval);
         });
 
-        // Pause on the correct word
         setTimeout(() => {
             currentWordIndex++;
             scrambleAllTexts();
-        }, scrambleInterval * 15 + pauseDuration); // Adjust timing for sync effect
+        }, scrambleInterval * 15 + pauseDuration);
     }
 
     scrambleAllTexts();
+
+    const sections = document.querySelectorAll('.skills-section, .container, .section');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });

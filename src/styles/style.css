@@ -17,103 +17,183 @@
 /* Define Space Mono */
 @font-face {
     font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+    src: url('../fonts/League_Spartan,Space_Mono/SpaceMono/SpaceMono-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Bold.ttf') format('truetype');
+    src: url('../fonts/League_Spartan,Space_Mono/SpaceMono/SpaceMono-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Italic.ttf') format('truetype');
+    src: url('../fonts/League_Spartan,Space_Mono/SpaceMono/SpaceMono-Italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-BoldItalic.ttf') format('truetype');
+    src: url('../fonts/League_Spartan,Space_Mono/SpaceMono/SpaceMono-BoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
 
 body {
-    background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
-    color: #ddd;
+    background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);    color: #ddd;
     font-family: 'League Spartan', sans-serif;
     text-align: center;
+    overflow-x: hidden;
+}
+
+/* WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(36, 31, 98);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7f00ff; /* fallback for old browsers */
+    
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #3a0ca3 0%, #0c72fb 100%);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #6a11cb linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
+}
+
+/* Scrollbar styles for IE and Edge */
+body {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 h5 {
     font-family: 'Space Mono', monospace;
+    color: #b0b0b0; /* Complementary text grey */
+    font-size: 1.5rem;
 }
+
+.container, .section, .skills-container, .skills-section {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.about img {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.about-me-container {
+    width:70%;
+    margin-top: 20%;
+    height: 100vh; /* Ensures the section takes the full viewport height */
+}
+
+.photo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.portfolio-photo {
+    transition: transform 0.5s linear, filter 1s ease-in-out;
+    position: relative;
+    filter: grayscale(100%);
+    max-width: 80%; /* Adjust the max-width as needed */
+}
+
+.photo-container:hover .portfolio-photo {
+    transform: translate(-10px, -10px);
+    filter: grayscale(0%);
+}
+
+.photo-container:hover .thumbtack {
+    top: 10px;
+    left: calc(60% + 10px);
+    transform: translate(-60%, -10px);
+}
+
+.thumbtack {
+    position: absolute;
+    top: 15px;
+    left: 60%;
+    transform: translateX(-60%);
+    width: 75px;
+    height: 50px;
+    z-index: 1;
+    transition: top 0.5s linear, left 0.5s linear, transform 0.5s linear;
+}
+
+
 
 .skills-container {
     margin-top: 50px;
+    width: 80%;
+    padding: 20px;
 }
 
 .skills-section {
     margin-bottom: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .skills-section h4 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #b0b0b0; /* Complementary text grey */
 }
 
 .skills-section ul {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    list-style: none;
+    padding: 0;
+    color: #b0b0b0; /* Complementary text grey */
 }
 
-.separator {
-    border-top: 1px solid #ddd;
-    width: 80%;
-    margin: 20px auto;
+.left {
+    text-align: left;
+    font-size: 2.5rem;
 }
 
-p {
-    color: darkgrey;
+.right {
+    text-align: right;
+    font-size: 2.5rem;
 }
-
-
-.projects-container p{
-    font-size: small;
-}
-
-
-
-.about-me-container {
-    width: 85%;
-    margin: 0 auto 5%;
-}
-
 
 .scramble {
+    display: inline-block;
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    white-space: nowrap;
+    overflow: hidden;
     cursor: pointer;
     position: relative;
-    display: inline-block;
     transition: all 0.10s ease-in-out;
-}
-
-.position-relative {
-    position: relative;
-}
-
-.thumbtack {
-    position: absolute;
-    top: 15px; /* Initial position */
-    left: 60%;
-    transform: translateX(-60%);
-    width: 75px; /* Adjust width */
-    height: 50px; /* Adjust height */
-    z-index: 1;
-    transition: top 0.5s linear, left 0.5s linear, transform 0.5s linear;
+    color: #b0b0b0; /* Complementary text grey */
 }
 
 .scramble:hover,
@@ -121,10 +201,15 @@ p {
     color: #ff4081;
 }
 
+.position-relative {
+    position: relative;
+}
 
-.about img {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+
+
+
+.projects {
+    margin-top: 50px;
 }
 
 .projects-container {
@@ -136,7 +221,6 @@ p {
     margin: 20px;
     padding: 10px;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
     border: 1px solid #ddd;
 }
@@ -152,10 +236,10 @@ p {
 
 .polaroid-card .card-body {
     padding: 10px;
-    height: 180px; /* Set a fixed height for uniformity */
+    height: 180px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Adjust to evenly space items */
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     position: relative;
@@ -165,7 +249,7 @@ p {
     width: 20px;
     height: 20px;
     position: relative;
-    bottom: 15px; /* Adjust this value to align the logo */
+    bottom: 15px;
 }
 
 .polaroid-card .card-body h5 {
@@ -175,7 +259,7 @@ p {
 
 .polaroid-card .card-body a {
     position: relative;
-    bottom: 15px; /* Adjust this value to move the link down */
+    bottom: 15px;
 }
 
 .polaroid-card .card-title {
@@ -187,25 +271,3 @@ p {
 }
 
 
-/* New CSS for the hover effect */
-.photo-container {
-    position: relative;
-    display: inline-block;
-}
-
-.portfolio-photo {
-    transition: transform 0.5s linear, filter 1s ease-in-out;
-    position: relative;
-    filter: grayscale(100%);
-}
-
-.photo-container:hover .portfolio-photo {
-    transform: translate(-10px, -10px); /* Move top left */
-    filter: grayscale(0%);
-}
-
-.photo-container:hover .thumbtack {
-    top: 10px; /* Move up */
-    left: calc(60% + 10px); /* Move right */
-    transform: translate(-60%, -10px); /* Move up */
-}

@@ -1,47 +1,74 @@
-/* Define Roboto Slab */
-@font-face {
-    font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab/static/RobotoSlab-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+
+
+.position-relative {
+    position: relative;
 }
 
-/* Define League Spartan */
-@font-face {
-    font-family: 'League Spartan';
-    src: url('../fonts/League_Spartan/static/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
 }
 
-/* Define Space Mono */
-@font-face {
-    font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+.left-sidebar {
+    left: 20px;
+    bottom: 20px;
 }
 
-@font-face {
-    font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+.right-sidebar {
+    right: 20px;
+    bottom: 20px;
 }
 
-@font-face {
-    font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@font-face {
-    font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
+.sidebar ul li {
+    margin: 10px 0;
 }
+
+.sidebar ul li a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul li a:hover img {
+    transform: scale(1.1);
+}
+
+.email {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin-bottom: 10px;
+    font-family: 'Space Mono', monospace;
+    background: #7f00ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7f00ff, #e100ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7f00ff, #e100ff);    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    margin-top: 10px;
+}
+
+.line {
+    width: 1px;
+    height: 150px;
+    background: linear-gradient(101.8deg, rgb(28, 28, 224) -0.2%, rgb(153, 68, 230) 55.2%, rgb(235, 18, 180) 84.4%);    margin-top: 10px;
+}
+
+/* Nav styles */
 .navContainer {
     width: 85%;
     margin: 0 auto;
@@ -59,6 +86,7 @@
     outline: none;
     box-shadow: none;
 }
+
 /* Adjust size and color */
 .navbar-toggler {
     border: none;
