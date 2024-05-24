@@ -1,10 +1,65 @@
+/* Define Roboto Slab */
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab/static/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Define League Spartan */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/League_Spartan/static/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Define Space Mono */
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/League_Spartan,Space_Mono/Space_Mono/SpaceMono-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
 body {
     background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
     color: #ddd;
+    font-family: 'League Spartan', sans-serif ;
 }
 
-body p {
+p {
     color: darkgrey;
+}
+h5{
+   
+    font-family: 'Space Mono', monospace;
+ 
+}
+
+.projects-container p{
+    font-size: small;
 }
 
 .navContainer {
@@ -119,6 +174,7 @@ body p {
 .polaroid-card .card-text {
     margin-bottom: 1rem;
 }
+
 
 /* New CSS for the hover effect */
 .photo-container {
