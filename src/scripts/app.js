@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     scrambleAllTexts();
 
-    const sections = document.querySelectorAll('.skills-section, .container, .section');
+    const sections = document.querySelectorAll('.skills-section, .container, .section, .sidebar');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

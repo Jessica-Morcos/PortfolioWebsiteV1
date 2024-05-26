@@ -1,50 +1,6 @@
-/* Define Roboto Slab */
-@font-face {
-    font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab/static/RobotoSlab-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Define League Spartan */
-@font-face {
-    font-family: 'League Spartan';
-    src: url('../fonts/League_Spartan/static/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Define Space Mono */
-@font-face {
-    font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/SpaceMono/SpaceMono-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/SpaceMono/SpaceMono-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/SpaceMono/SpaceMono-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Space Mono';
-    src: url('../fonts/League_Spartan,Space_Mono/SpaceMono/SpaceMono-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-
 body {
-    background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);    color: #ddd;
+    background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
+    color: #ddd;
     font-family: 'League Spartan', sans-serif;
     text-align: center;
     overflow-x: hidden;
@@ -61,7 +17,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: #7f00ff; /* fallback for old browsers */
-    
     border-radius: 10px;
 }
 
@@ -82,8 +37,26 @@ body {
 
 h5 {
     font-family: 'Space Mono', monospace;
-    color: #b0b0b0; /* Complementary text grey */
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    color: #b0b0b0; /* Adjust color as needed */
+    position: relative; /* Required for the ::after pseudo-element */
+    padding-bottom: 10px; /* Space between the text and the line */
+}
+
+h5::after {
+    content: '';
+    display: block;
+    width: 50%; /* Full width */
+    height: 1px; /* Height of the line */
+    background: rgba(255, 255, 255, 0.2); /* Faint line color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+h2{
+    color: white;
 }
 
 .container, .section, .skills-container, .skills-section {
@@ -99,6 +72,14 @@ h5 {
 }
 
 
+.numbered-Sections {
+    color: rgb(235, 18, 180);
+}
+
+.boldColor {
+    color:rgb(235, 18, 180);
+    font-weight: bold;
+}
 
 .about img {
     border-bottom-left-radius: 15px;
@@ -106,9 +87,13 @@ h5 {
 }
 
 .about-me-container {
-    width:70%;
+    width: 70%;
     margin-top: 20%;
     height: 100vh; /* Ensures the section takes the full viewport height */
+}
+
+.about-me-container h3 {
+    color: rgb(153, 68, 230) ;
 }
 
 .photo-container {
@@ -145,11 +130,9 @@ h5 {
     transition: top 0.5s linear, left 0.5s linear, transform 0.5s linear;
 }
 
-
-
 .skills-container {
     margin-top: 50px;
-    width: 80%;
+    width: 70%;
     padding: 20px;
 }
 
@@ -205,61 +188,72 @@ h5 {
     position: relative;
 }
 
-
-
-
 .projects {
     margin-top: 50px;
 }
 
 .projects-container {
-    width: 85%;
+    width: 70%;
     margin: 0 auto 5%;
 }
 
 .polaroid-card {
+    position: relative;
     margin: 20px;
     padding: 10px;
-    background-color: white;
-    transition: transform 0.3s;
-    border: 1px solid #ddd;
+    background-color: rgb(48, 25, 52);
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, border-radius 0.3s;
+    border: 5px solid transparent; /* Start with a transparent border */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 26rem; /* Adjust height to make it taller */
+    width: 20rem;
+   
 }
 
 .polaroid-card:hover {
     transform: scale(1.05);
+    border-color: transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(127, 0, 255, 0.7); /* Increased shadow on hover */
 }
 
 .polaroid-card img {
     max-width: 100%;
-    height: auto;
+    height: 15rem; /* Ensure image height is taller */
+    border-radius: 15px; /* Ensure image corners match the card corners */
 }
 
 .polaroid-card .card-body {
-    padding: 10px;
-    height: 180px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
+    flex-grow: 1;
     position: relative;
+    padding-bottom: 40px; /* Add space at the bottom for the GitHub logo */
 }
 
 .polaroid-card .card-body .githubLogo {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    bottom: 15px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 10px; /* Position it at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .polaroid-card .card-body h5 {
-    color: black;
+    color: white;
     font-family: 'League Spartan', sans-serif;
 }
 
 .polaroid-card .card-body a {
-    position: relative;
-    bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .polaroid-card .card-title {
@@ -268,6 +262,12 @@ h5 {
 
 .polaroid-card .card-text {
     margin-bottom: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-
+.contact-container {
+    width: 70%;
+}
