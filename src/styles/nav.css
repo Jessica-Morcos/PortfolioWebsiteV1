@@ -1,9 +1,3 @@
-
-
-.position-relative {
-    position: relative;
-}
-
 /* Sidebar styles */
 .sidebar {
     position: fixed;
@@ -54,7 +48,7 @@
 
 .sidebar ul li a:hover img {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 25px  rgb(235, 18, 180));
+    filter: drop-shadow(0 0 25px rgb(235, 18, 180));
     transition: filter 0.3s ease;
 }
 
@@ -63,14 +57,13 @@
     transform: rotate(180deg);
     margin-bottom: 10px;
     font-family: 'Space Mono', monospace;
-    background: #7f00ff; /* fallback for old browsers */
+    background: #7f00ff;
     background: rgb(235, 18, 180);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-top: 10px;
 }
-
 
 /* Left Sidebar Line */
 .left-sidebar .line {
@@ -92,8 +85,8 @@
 .navContainer {
     width: 85%;
     margin: 0 auto;
-    border-bottom-left-radius: 15px; /* Adjust the radius as needed */
-    border-bottom-right-radius: 15px; /* Adjust the radius as needed */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .navbar-nav .nav-link {
@@ -120,5 +113,5 @@
 
 .navbar-brand img {
     height: 32px;
-    margin-right: 0; /* Adjust size as needed */
+    margin-right: 0;
 }

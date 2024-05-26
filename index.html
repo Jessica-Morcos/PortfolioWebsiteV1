@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jessica-Morcos</title>
     <link rel="icon" href="public/favicon_io/favicon.ico" type="image/x-icon">
-   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="public/fonts/MyWebfontsKit.css">
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/nav.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark navContainer">
             <div class="container-fluid">
@@ -35,15 +34,12 @@
         <div class="sidebar left-sidebar">
             <div class="line"></div>
             <div class="email">jessica.morcos7@outlook.com</div>
-            
         </div>
-        <!-- Right Sidebar -->
+
         <div class="sidebar right-sidebar">
-        
             <ul>
                 <li><a href="https://github.com" target="_blank"><img src="public/icons/icons8-github-48.png" alt="GitHub"></a></li>
                 <li><a href="https://linkedin.com" target="_blank"><img src="public/icons/icons8-linkedin-48.png" alt="LinkedIn"></a></li>
-                
             </ul>
             <div class="line"></div>
         </div>
@@ -53,7 +49,7 @@
             <div class="about-me-container container">
                 <h5 class="text-lg-start fw-light"><span class="numbered-Sections">01.</span>About Me</h5>
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-md-6 text-lg-start ">
+                    <div class="col-md-6 text-lg-start">
                         <h3 class="fw-bold">Hey, name is</h3>
                         <h2 class="display-5 fw-bold">Jessica Morcos!</h2>
                         <p class="fs-5">I am an <span class="boldColor">undergraduate</span> student at <span class="boldColor">Toronto Metropolitan University</span> with a passion for exploring diverse areas within my program. My primary interests lie in data analytics and web design, where I thrive on transforming complex data into actionable insights and creating engaging, user-friendly websites. I am eager to apply my skills and knowledge in a dynamic internship position.</p>
@@ -61,33 +57,32 @@
                     <div class="col-md-6 position-relative photo-container">
                         <img src="public/portfolioPhoto.png" alt="my Image" class="img-fluid rounded portfolio-photo">
                         <img src="public/ThumbTackPolaroid.png" alt="thumbtack" class="thumbtack">
-                    </div>       
+                    </div>
                 </div>
             </div>
         </section>
         <section class="skills" id="skills">
             <div class="skills-container container">
                 <h5 class="text-lg-start fw-light"><span class="numbered-Sections">02.</span>Skills</h5>
-                
-                <div class="skills-section right">
-                    <h4>Languages:</h4>
-                    <ul class="list-unstyled">
-                        <li class="scramble" data-words="Java,Python,Javascript ES6+,HTML5,CSS,C">Java</li>
-                    </ul>
-                </div>
-                
-                <div class="skills-section left">
-                    <ul class="list-unstyled">
-                        <li class="scramble" data-words="React.js,Bootstrap,Sass">React.js</li>
-                    </ul>
-                    <h4>:Frameworks</h4>
-                </div>
-                
-                <div class="skills-section right">
-                    <h4>Tools:</h4>
-                    <ul class="list-unstyled">
-                        <li class="scramble" data-words="MySQL,php">MySQL</li>
-                    </ul>
+                <div class="row">
+                    <div class="col-md-4 skills-section">
+                        <h4>Languages:</h4>
+                        <ul class="list-unstyled">
+                            <li class="scramble" data-words="Java,Python,Javascript ES6+,HTML5,CSS,C">Java</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 skills-section">
+                        <h4>Frameworks:</h4>
+                        <ul class="list-unstyled">
+                            <li class="scramble" data-words="React.js,Bootstrap,Sass">React.js</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 skills-section">
+                        <h4>Tools:</h4>
+                        <ul class="list-unstyled">
+                            <li class="scramble" data-words="MySQL,php">MySQL</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -95,53 +90,55 @@
             <div class="projects-container container mt-5 pt-5">
                 <div class="row justify-content-center">
                     <h5 class="text-lg-start fw-light mb-4"><span class="numbered-Sections">03.</span>Projects</h5>
-                    <div class="card mx-auto polaroid-card">
-                        <img src="public/polaroidCardPhoto/metCashImg2.png" class="card-img-top" alt="Placeholder image">
-                        <div class="card-body">
-                            <h5 class="card-title">MetCash</h5>
-                            <p class="card-text">Automatic Teller Machine simulation that performs functions as such - Withdraw Funds, Deposit Funds, Transfer Funds, Pay Bills, Account Inquiries</p>
-                            <a href="https://github.com/Jessica-Morcos/MetCash" class="githubLogo">
-                                <img src="public/icons/github-mark.png" alt="Button Image" style="width: 100px; height: auto;">
-                            </a>
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="card mx-auto polaroid-card">
+                            <img src="public/polaroidCardPhoto/metCashImg2.png" class="card-img-top" alt="Placeholder image">
+                            <div class="card-body">
+                                <h5 class="card-title">MetCash</h5>
+                                <p class="card-text">Automatic Teller Machine simulation that performs functions such as Withdraw Funds, Deposit Funds, Transfer Funds, Pay Bills, Account Inquiries</p>
+                                <a href="https://github.com/Jessica-Morcos/MetCash" class="githubLogo">
+                                    <img src="public/icons/github-mark.png" alt="Button Image" style="width: 100px; height: auto;">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card mx-auto polaroid-card">
-                        <img src="public/polaroidCardPhoto/portfolioImg.png" class="card-img-top" alt="Placeholder image">
-                        <div class="card-body">
-                            <h5 class="card-title">Portfolio Website</h5>
-                            <p class="card-text">A personal website showcasing my skills, projects, and experiences in data analytics and web design.</p>
-                            <a href="https://github.com/Jessica-Morcos/PortfolioWebsiteV1" class="githubLogo">
-                                <img src="public/icons/github-mark.png" alt="Button Image" style="width: 100px; height: auto;">
-                            </a>
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="card mx-auto polaroid-card">
+                            <img src="public/polaroidCardPhoto/portfolioImg.png" class="card-img-top" alt="Placeholder image">
+                            <div class="card-body">
+                                <h5 class="card-title">Portfolio Website</h5>
+                                <p class="card-text">A personal website showcasing my skills, projects, and experiences in data analytics and web design.</p>
+                                <a href="https://github.com/Jessica-Morcos/PortfolioWebsiteV1" class="githubLogo">
+                                    <img src="public/icons/github-mark.png" alt="Button Image" style="width: 100px; height: auto;">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card mx-auto polaroid-card">
-                        <img src="public/polaroidCardPhoto/dolceVistitoImg.png" class="card-img-top" alt="Placeholder image">
-                        <div class="card-body">
-                            <h5 class="card-title">Dolce Vestito</h5>
-                            <p class="card-text">Application designed to streamline clothing store operations, managing inventory, customers, transactions, and employee information efficiently.</p>
-                            <a href="https://github.com/Jessica-Morcos/Dolce-Vistito" class="githubLogo">
-                                <img src="public/icons/github-mark.png" alt="Button Image" style="width: 100px; height: auto;">
-                            </a>
+                    <div class="col-md-4 col-sm-6 col-12 mb-4">
+                        <div class="card mx-auto polaroid-card">
+                            <img src="public/polaroidCardPhoto/dolceVistitoImg.png" class="card-img-top" alt="Placeholder image">
+                            <div class="card-body">
+                                <h5 class="card-title">Dolce Vestito</h5>
+                                <p class="card-text">Application designed to streamline clothing store operations, managing inventory, customers, transactions, and employee information efficiently.</p>
+                                <a href="https://github.com/Jessica-Morcos/Dolce-Vistito" class="githubLogo">
+                                    <img src="public/icons/github-mark.png" alt="Button Image" style="width: 100px; height: auto;">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        
         
         
         <section class="contact" id="contact">
             <div class="contact-container container mt-2 pt-5">
                 <h5 class="text-lg-start fw-light"><span class="numbered-Sections">04.</span>Get in Touch!</h5>
                 <div class="mt-0 pt-0 row align-items-center">
-                   
                 </div>
             </div>
         </section>
     </main>
-
     <footer class="text-center mt-5">
         <p>Design & built by Jessica Morcos</p>
     </footer>

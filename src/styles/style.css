@@ -1,3 +1,4 @@
+/* Existing CSS */
 body {
     background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
     color: #ddd;
@@ -6,94 +7,53 @@ body {
     overflow-x: hidden;
 }
 
-/* WebKit-based browsers (Chrome, Safari) */
-::-webkit-scrollbar {
-    width: 5px;
+section {
+    width: 100%;
+    margin: 40px 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-::-webkit-scrollbar-track {
-    background: rgb(36, 31, 98);
-}
-
-::-webkit-scrollbar-thumb {
-    background: #7f00ff; /* fallback for old browsers */
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #3a0ca3 0%, #0c72fb 100%);
-}
-
-/* Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #6a11cb linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
-}
-
-/* Scrollbar styles for IE and Edge */
-body {
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+.container {
+    width: 90%;
+    margin: 0 auto;
 }
 
 h5 {
     font-family: 'Space Mono', monospace;
-    font-size: 1.5rem; /* Adjust font size as needed */
-    color: #b0b0b0; /* Adjust color as needed */
-    position: relative; /* Required for the ::after pseudo-element */
-    padding-bottom: 10px; /* Space between the text and the line */
+    font-size: 1.5rem;
+    color: #b0b0b0;
+    position: relative;
+    padding-bottom: 10px;
 }
 
 h5::after {
     content: '';
     display: block;
-    width: 50%; /* Full width */
-    height: 1px; /* Height of the line */
-    background: rgba(255, 255, 255, 0.2); /* Faint line color */
+    width: 50%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
-
-h2{
+h2 {
     color: white;
 }
-
-.container, .section, .skills-container, .skills-section {
-    margin-top: 20px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 
 .numbered-Sections {
     color: rgb(235, 18, 180);
 }
 
 .boldColor {
-    color:rgb(235, 18, 180);
+    color: rgb(235, 18, 180);
     font-weight: bold;
 }
 
 .about img {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-}
-
-.about-me-container {
-    width: 70%;
-    margin-top: 20%;
-    height: 100vh; /* Ensures the section takes the full viewport height */
-}
-
-.about-me-container h3 {
-    color: rgb(153, 68, 230) ;
 }
 
 .photo-container {
@@ -105,7 +65,7 @@ h2{
     transition: transform 0.5s linear, filter 1s ease-in-out;
     position: relative;
     filter: grayscale(100%);
-    max-width: 80%; /* Adjust the max-width as needed */
+    max-width: 100%;
 }
 
 .photo-container:hover .portfolio-photo {
@@ -132,7 +92,7 @@ h2{
 
 .skills-container {
     margin-top: 50px;
-    width: 70%;
+    width: 100%;
     padding: 20px;
 }
 
@@ -140,22 +100,22 @@ h2{
     margin-bottom: 40px;
     flex: 1;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .skills-section h4 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #b0b0b0; /* Complementary text grey */
+    color: #b0b0b0;
 }
 
 .skills-section ul {
     font-size: 2.5rem;
     list-style: none;
     padding: 0;
-    color: #b0b0b0; /* Complementary text grey */
+    color: #b0b0b0;
 }
 
 .left {
@@ -170,13 +130,13 @@ h2{
 
 .scramble {
     display: inline-block;
-    font-size: 2.5rem; /* Adjust the font size as needed */
+    font-size: 2.5rem;
     white-space: nowrap;
     overflow: hidden;
     cursor: pointer;
     position: relative;
     transition: all 0.10s ease-in-out;
-    color: #b0b0b0; /* Complementary text grey */
+    color: #b0b0b0;
 }
 
 .scramble:hover,
@@ -193,8 +153,8 @@ h2{
 }
 
 .projects-container {
-    width: 70%;
-    margin: 0 auto 5%;
+    margin: 40px auto;
+    padding: 20px;
 }
 
 .polaroid-card {
@@ -203,26 +163,25 @@ h2{
     padding: 10px;
     background-color: rgb(48, 25, 52);
     transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, border-radius 0.3s;
-    border: 5px solid transparent; /* Start with a transparent border */
+    border: 5px solid transparent;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    height: 26rem; /* Adjust height to make it taller */
-    width: 20rem;
-   
+    height: 100%;
+    width: 100%;
 }
 
 .polaroid-card:hover {
     transform: scale(1.05);
     border-color: transparent;
     border-radius: 15px;
-    box-shadow: 0 0 50px rgba(127, 0, 255, 0.7); /* Increased shadow on hover */
+    box-shadow: 0 0 50px rgba(127, 0, 255, 0.7);
 }
 
 .polaroid-card img {
     max-width: 100%;
-    height: 15rem; /* Ensure image height is taller */
-    border-radius: 15px; /* Ensure image corners match the card corners */
+    height: auto;
+    border-radius: 15px;
 }
 
 .polaroid-card .card-body {
@@ -233,14 +192,14 @@ h2{
     text-align: center;
     flex-grow: 1;
     position: relative;
-    padding-bottom: 40px; /* Add space at the bottom for the GitHub logo */
+    padding-bottom: 40px;
 }
 
 .polaroid-card .card-body .githubLogo {
     width: 30px;
     height: 30px;
     position: absolute;
-    bottom: 10px; /* Position it at the bottom */
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -269,5 +228,35 @@ h2{
 }
 
 .contact-container {
-    width: 70%;
+    margin-top: 30%;
+    padding: 20px;
+}
+
+.position-relative {
+    position: relative;
+}
+
+
+/* Media queries for smaller screens */
+@media (max-width: 992px) {
+    .skills-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo-container, .about-me-container, .projects-container {
+        text-align: center;
+    }
+
+    .photo-container img {
+        max-width: 80%;
+    }
+
+    .skills-section ul, .skills-section h4 {
+        font-size: 1.5rem;
+    }
+
+    .polaroid-card {
+        margin-bottom: 30px;
+    }
 }
