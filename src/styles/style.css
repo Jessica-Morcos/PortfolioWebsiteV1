@@ -25,7 +25,7 @@
 
 html, body {
     height: 100%;
-   
+    width:100%;
     margin: 0;
     padding: 0;
     background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
@@ -95,8 +95,8 @@ h2 {
     margin-top: 50px;
     height: 75vh;
 }
-.about-me-container h3{
-    
+.about-me-container h3 {
+    color: rgb(153, 68, 230);
 }
 .about-me-container p{
     font-size:1.5rem;
@@ -297,12 +297,15 @@ h2 {
 .fade-out-up {
     opacity: 0;
     transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .fade-in-up {
     opacity: 1;
     transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
 
 
 .polaroid-card .card-title {

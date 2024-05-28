@@ -43,22 +43,18 @@
 .sidebar ul li a img {
     width: 30px;
     height: 30px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.sidebar ul li a:hover img {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 25px rgb(235, 18, 180));
-    transition: filter 0.3s ease;
-}
+
 
 .email {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     margin-bottom: 10px;
     font-family: 'Space Mono', monospace;
-    background: #7f00ff;
-    background: rgb(235, 18, 180);
+    
+    background: rgb(211, 16, 162);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

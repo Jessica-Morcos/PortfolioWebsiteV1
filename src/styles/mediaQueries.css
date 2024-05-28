@@ -17,9 +17,6 @@
 }
 /* Phones (portrait) */
 @media (max-width: 480px) {
-  .text-lg-start {
-    text-align: start;
-  }
   .sidebar {
     display: none;
   }
@@ -34,14 +31,11 @@
   .about-me-container .col-md-6 {
     width: 100%;
   }
-  .about-me-container .text-lg-start, .about-me-container .photo-container {
-    text-align: start;
-  }
   .about-me-container h2 {
     font-size: 2rem;
   }
   .about-me-container h5 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .about-me-container h5 .numbered-Sections {
     font-size: 1rem;
@@ -58,6 +52,12 @@
   .skills-container {
     width: 100%;
   }
+  .skills-container h5 {
+    font-size: 1.1rem;
+  }
+  .skills-container h5 .numbered-Sections {
+    font-size: 1rem;
+  }
   .skills-container p {
     font-size: 1.1rem;
   }
@@ -73,18 +73,26 @@
   .skills-container .skills-section .skills-item .scramble {
     font-size: 1rem;
   }
+  .projects-container h5 {
+    font-size: 1.1rem;
+  }
+  .projects-container h5 .numbered-Sections {
+    font-size: 1rem;
+  }
+  .contact-container h5 {
+    font-size: 1.1rem;
+  }
+  .contact-container h5 .numbered-Sections {
+    font-size: 1rem;
+  }
 }
 /* Small tablets and large phones (portrait) */
 @media (max-width: 768px) {
   .about-me-container .row {
     flex-direction: column;
-    text-align: start;
   }
   .about-me-container .col-md-6 {
     width: 100%;
-  }
-  .about-me-container .text-lg-start, .about-me-container .photo-container {
-    text-align: start;
   }
   .about-me-container .photo-container img {
     max-width: 90%;
@@ -105,14 +113,8 @@
   .about-me-container .col-md-6 {
     width: 100%;
   }
-  .about-me-container .text-lg-start, .about-me-container .photo-container {
-    text-align: start;
-  }
   .about-me-container .photo-container img {
     max-width: 90%;
-  }
-  .about-me-container .photo-container .thumbtack {
-    display: none;
   }
   .skills-container p {
     width: 100%; /* Override col-md-8 */
