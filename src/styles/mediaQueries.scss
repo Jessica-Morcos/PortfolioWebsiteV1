@@ -1,79 +1,133 @@
-
-/* Media queries for smaller screens */
-@media (max-width: 992px) {
-    .skills-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .photo-container, .about-me-container, .projects-container {
-        text-align: center;
-    }
-
-    .photo-container img {
-        max-width: 80%;
-    }
-
-    .skills-section ul, .skills-section h4 {
-        font-size: 1.5rem;
-    }
-
-    .polaroid-card {
-        margin-bottom: 30px;
-    }
-}
-
+/* Variables */
+$breakpoint-small-phones: 375px;
+$breakpoint-phones: 480px;
+$breakpoint-small-tablets-large-phones: 767px;
+$breakpoint-smaller-screens: 992px;
 
 /* Small phones (portrait) */
-@media (max-width: 375px) {
+@media (max-width: $breakpoint-small-phones) {
     .sidebar {
         display: none;
     }
-     .about-me-container h2, .about-me-container p {
-        font-size: 1rem;
-    }
-    .about-me-container .photo-container img {
-        max-width: 90%;
+    .about-me-container {
+        h2, p {
+            font-size: 1rem;
+        }
+        .photo-container {
+            img {
+                max-width: 90%;
+            }
+        }
     }
 }
 
 /* Phones (portrait) */
-@media (max-width: 480px) {
+@media (max-width: $breakpoint-phones) {
+    .text-lg-start{
+        text-align: start;
+    }
     .sidebar {
         display: none;
     }
-   
-    .photo-container img {
-        max-width: 90%;
+    .about-me-container {
+        margin-top:0;
+        width: 100%;
+        .row {
+            flex-direction: column;
+            text-align: start;
+        }
+        .col-md-6 {
+            width: 100%;
+        }
+        .text-lg-start, .photo-container {
+            text-align: start;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        h5 {
+            font-size: 1rem;
+            .numbered-Sections{
+                font-size: 1rem;
+            }
+        }
+        p {
+            font-size: 1rem;
+        }
+        .photo-container {
+            img {
+                max-width: 90%;
+            }
+
+        }
     }
-    .about-me-container p {
-        font-size: 1rem;
-    }
-    .about-me-container h5, .about-me-container h3{
-        font-size:1.25rem;
-    }
-     .about-me-container h2 {
-        font-size: 2rem;
-    }
+    .skills-container{
+    width: 100%;
+      p{
+        font-size: 1.1rem;
+      }
+      .skills-section{
+        gap:10px;
+        
+        .skills-item{
+            margin-bottom: 0;
+            h4{
+                font-size: 1rem;
+            }
+            
+            .scramble{
+                font-size: 1rem;
+              }
+          }
+      }
+      
+   }
 }
 
 /* Small tablets and large phones (portrait) */
-@media (max-width: 767px) {
-    .about-me-container .row {
+@media (max-width: $breakpoint-small-tablets-large-phones) {
+    .about-me-container {
+        .row {
+            flex-direction: column;
+            text-align: start;
+        }
+        .col-md-6 {
+            width: 100%;
+        }
+        .text-lg-start, .photo-container {
+            text-align: start;
+        }
+        .photo-container {
+            img {
+                max-width: 90%;
+            }
+            .thumbtack {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Media queries for smaller screens */
+@media (max-width: $breakpoint-smaller-screens) {
+    .skills-section {
         flex-direction: column;
-        text-align: start;
+        text-align: center;
     }
-    .about-me-container .col-md-6 {
-        width: 100%;
+    .photo-container, .about-me-container, .projects-container {
+        text-align: center;
     }
-    .about-me-container .text-lg-start,
-    .about-me-container .photo-container {
-        text-align: start;
+    .photo-container {
+        img {
+            max-width: 80%;
+        }
     }
-    .about-me-container .photo-container img {
-        max-width: 90%;
+    .skills-section {
+        ul, h4 {
+            font-size: 1.5rem;
+        }
     }
-    .about-me-container .photo-container .thumbtack {
-        display: none;
+    .polaroid-card {
+        margin-bottom: 30px;
     }
 }
