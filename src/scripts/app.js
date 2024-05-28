@@ -55,4 +55,32 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => {
         observer.observe(section);
     });
+
+    // Smooth image change on hover
+    const cardElements = document.querySelectorAll('.polaroid-card');
+
+    cardElements.forEach(cardElement => {
+        const imgElement = cardElement.querySelector('img#changeImg');
+        const originalSrc = imgElement.src;
+        const hoverSrc = 'public/icons/icons8-github-50.png';
+
+        cardElement.addEventListener('mouseover', function() {
+            imgElement.classList.add('fade-out-up');
+            setTimeout(function() {
+                imgElement.src = hoverSrc;
+                imgElement.classList.remove('fade-out-up');
+                imgElement.classList.add('fade-in-up');
+            }, 300); // Duration of the fade-out transition
+        });
+
+        cardElement.addEventListener('mouseout', function() {
+            imgElement.classList.remove('fade-in-up');
+            imgElement.classList.add('fade-out-up');
+            setTimeout(function() {
+                imgElement.src = originalSrc;
+                imgElement.classList.remove('fade-out-up');
+                imgElement.classList.add('fade-in-up');
+            }, 300); // Duration of the fade-out transition
+        });
+    });
 });

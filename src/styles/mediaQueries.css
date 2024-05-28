@@ -1,4 +1,5 @@
 /* Variables */
+/* Ensure global box-sizing */
 /* Small phones (portrait) */
 @media (max-width: 375px) {
   .sidebar {
@@ -9,6 +10,9 @@
   }
   .about-me-container .photo-container img {
     max-width: 90%;
+  }
+  .about-me-container .photo-container .thumbtack {
+    display: none;
   }
 }
 /* Phones (portrait) */
@@ -48,6 +52,9 @@
   .about-me-container .photo-container img {
     max-width: 90%;
   }
+  .about-me-container .photo-container .thumbtack {
+    display: none;
+  }
   .skills-container {
     width: 100%;
   }
@@ -68,7 +75,7 @@
   }
 }
 /* Small tablets and large phones (portrait) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .about-me-container .row {
     flex-direction: column;
     text-align: start;
@@ -85,21 +92,41 @@
   .about-me-container .photo-container .thumbtack {
     display: none;
   }
+  .skills-container p {
+    width: 100%; /* Override col-md-8 */
+  }
 }
 /* Media queries for smaller screens */
 @media (max-width: 992px) {
-  .skills-section {
+  .about-me-container .row {
     flex-direction: column;
-    text-align: center;
+    text-align: start;
   }
-  .photo-container, .about-me-container, .projects-container {
-    text-align: center;
+  .about-me-container .col-md-6 {
+    width: 100%;
+  }
+  .about-me-container .text-lg-start, .about-me-container .photo-container {
+    text-align: start;
+  }
+  .about-me-container .photo-container img {
+    max-width: 90%;
+  }
+  .about-me-container .photo-container .thumbtack {
+    display: none;
+  }
+  .skills-container p {
+    width: 100%; /* Override col-md-8 */
+  }
+  .skills-container .skills-section {
+    flex-direction: column;
+    text-align: start;
+    width: 100%;
+  }
+  .skills-container .skills-section ul, .skills-container .skills-section h4 {
+    font-size: 1.5rem;
   }
   .photo-container img {
     max-width: 80%;
-  }
-  .skills-section ul, .skills-section h4 {
-    font-size: 1.5rem;
   }
   .polaroid-card {
     margin-bottom: 30px;
