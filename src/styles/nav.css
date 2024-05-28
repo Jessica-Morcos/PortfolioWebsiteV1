@@ -83,7 +83,7 @@
 
 /* Nav styles */
 .navContainer {
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -114,4 +114,12 @@
 .navbar-brand img {
     height: 32px;
     margin-right: 0;
+}
+@media (max-width: 375px) {
+    .sidebar{
+        display: none;
+    }
+    .navContainer{
+        width: 100%;
+    }
 }

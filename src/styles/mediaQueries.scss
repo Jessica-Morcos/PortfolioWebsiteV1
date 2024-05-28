@@ -1,0 +1,79 @@
+
+/* Media queries for smaller screens */
+@media (max-width: 992px) {
+    .skills-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo-container, .about-me-container, .projects-container {
+        text-align: center;
+    }
+
+    .photo-container img {
+        max-width: 80%;
+    }
+
+    .skills-section ul, .skills-section h4 {
+        font-size: 1.5rem;
+    }
+
+    .polaroid-card {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Small phones (portrait) */
+@media (max-width: 375px) {
+    .sidebar {
+        display: none;
+    }
+     .about-me-container h2, .about-me-container p {
+        font-size: 1rem;
+    }
+    .about-me-container .photo-container img {
+        max-width: 90%;
+    }
+}
+
+/* Phones (portrait) */
+@media (max-width: 480px) {
+    .sidebar {
+        display: none;
+    }
+   
+    .photo-container img {
+        max-width: 90%;
+    }
+    .about-me-container p {
+        font-size: 1rem;
+    }
+    .about-me-container h5, .about-me-container h3{
+        font-size:1.25rem;
+    }
+     .about-me-container h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Small tablets and large phones (portrait) */
+@media (max-width: 767px) {
+    .about-me-container .row {
+        flex-direction: column;
+        text-align: start;
+    }
+    .about-me-container .col-md-6 {
+        width: 100%;
+    }
+    .about-me-container .text-lg-start,
+    .about-me-container .photo-container {
+        text-align: start;
+    }
+    .about-me-container .photo-container img {
+        max-width: 90%;
+    }
+    .about-me-container .photo-container .thumbtack {
+        display: none;
+    }
+}

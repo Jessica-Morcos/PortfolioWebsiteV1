@@ -1,10 +1,36 @@
-/* Existing CSS */
+@import 'mediaQueries';
+/* WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(36, 31, 98);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7f00ff; /* fallback for old browsers */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #3a0ca3 0%, #0c72fb 100%);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #6a11cb linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
+}
+
+
 body {
     background: linear-gradient(76.8deg, rgb(121, 45, 129) 3.6%, rgb(36, 31, 98) 90.4%);
     color: #ddd;
     font-family: 'League Spartan', sans-serif;
     text-align: center;
     overflow-x: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 section {
@@ -12,6 +38,14 @@ section {
     margin: 40px 0;
     padding: 20px;
     box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .container {
@@ -41,7 +75,9 @@ h5::after {
 h2 {
     color: white;
 }
-
+.about-me-container p{
+    font-size:1.5rem;
+}
 .numbered-Sections {
     color: rgb(235, 18, 180);
 }
@@ -59,6 +95,7 @@ h2 {
 .photo-container {
     position: relative;
     display: inline-block;
+    width: 45%;
 }
 
 .portfolio-photo {
@@ -92,7 +129,7 @@ h2 {
 
 .skills-container {
     margin-top: 50px;
-    width: 100%;
+    width: 90%;
     padding: 20px;
 }
 
@@ -154,6 +191,7 @@ h2 {
 
 .projects-container {
     margin: 40px auto;
+    width: 90%;
     padding: 20px;
 }
 
@@ -168,7 +206,7 @@ h2 {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100%;
+    width: 90%;
 }
 
 .polaroid-card:hover {
@@ -231,32 +269,18 @@ h2 {
     margin-top: 30%;
     padding: 20px;
 }
-
-.position-relative {
-    position: relative;
+.contact-container .btn {
+    font-size: 1.25rem;
+    background: rgb(235, 18, 180); /* Button background color */
+    border: none;
+    padding: 10px 20px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-/* Media queries for smaller screens */
-@media (max-width: 992px) {
-    .skills-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .photo-container, .about-me-container, .projects-container {
-        text-align: center;
-    }
-
-    .photo-container img {
-        max-width: 80%;
-    }
-
-    .skills-section ul, .skills-section h4 {
-        font-size: 1.5rem;
-    }
-
-    .polaroid-card {
-        margin-bottom: 30px;
-    }
+.contact-container .btn:hover {
+    background: rgb(153, 68, 230); /* Button hover color */
+    box-shadow: 0 0 15px rgba(153, 68, 230, 0.7); /* Button shadow on hover */
+}
+.position-relative {
+    position: relative;
 }
