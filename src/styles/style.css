@@ -49,9 +49,10 @@ main {
     flex: 1;
 }
 
+/* Ensure sections do not overlap */
 section {
     width: 100%;
-    margin: 40px 0;
+    margin: 40px 0; /* Ensure enough space between sections */
     padding: 20px;
     box-sizing: border-box;
     opacity: 0;
@@ -149,6 +150,13 @@ h2 {
     z-index: 1;
     transition: top 0.5s linear, left 0.5s linear, transform 0.5s linear;
 }
+.skills-container {
+    margin-top: 50px;
+    width: 90%;
+    padding: 20px;
+}
+
+
 .skills-intro {
     margin-bottom: 20px;
     color: #b0b0b0;
@@ -160,27 +168,6 @@ h2 {
     font-size: 1.6rem;
 }
 
-.scramble {
-    display: inline-block;
-    font-size: 1.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.10s ease-in-out;
-    color: #b0b0b0;
-}
-
-.scramble:hover,
-.scramble:active {
-    color: #ff4081;
-}
-
-.skills-container {
-    margin-top: 50px;
-    width: 90%;
-    padding: 20px;
-}
 
 .skills-section {
     display: flex;
@@ -216,10 +203,23 @@ h2 {
 }
 
 
-
-.position-relative {
+.scramble {
+    display: inline-block;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
     position: relative;
+    transition: all 0.10s ease-in-out;
+    color: #b0b0b0;
 }
+
+.scramble:hover,
+.scramble:active {
+    color: #ff4081;
+}
+
+
 
 .projects {
     margin-top: 50px;

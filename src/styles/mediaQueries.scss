@@ -106,19 +106,19 @@ $breakpoint-smaller-screens: 992px;
     }
 }
 
+
+
 /* Small tablets and large phones (portrait) */
 @media (max-width: $breakpoint-small-tablets-large-phones) {
-   
     .about-me-container {
         .row {
             flex-direction: column;
-           
         }
         .col-md-6 {
             width: 100%;
         }
-       
         .photo-container {
+            width: 100%;
             img {
                 max-width: 90%;
             }
@@ -128,11 +128,20 @@ $breakpoint-smaller-screens: 992px;
         }
     }
     .skills-container {
+        margin-top: 50px; /* Adjust margin for skills container */
         p {
             width: 100%; /* Override col-md-8 */
         }
     }
+    .about-me-container {
+        margin-top: 20px; /* Adjust margin for about me container */
+    }
+    .portfolio-photo {
+        width: 100%;
+        height: auto; /* Ensure the portfolio photo adjusts automatically */
+    }
 }
+
 
 /* Media queries for smaller screens */
 @media (max-width: $breakpoint-smaller-screens) {
