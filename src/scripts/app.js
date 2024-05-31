@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const originalSrc = imgElement.src;
         let hoverSrc;
 
-        // Determine the hover source based on the original source
+ 
         if (originalSrc.includes('github')) {
             hoverSrc = 'public/icons/icons8-github-filled-48.png';
         } else if (originalSrc.includes('linkedin')) {

@@ -326,15 +326,15 @@ h2 {
 }
 .contact-container .btn {
     font-size: 1.25rem;
-    background: rgb(235, 18, 180); /* Button background color */
+    background: rgb(235, 18, 180);
     border: none;
     padding: 10px 20px;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-container .btn:hover {
-    background: rgb(153, 68, 230); /* Button hover color */
-    box-shadow: 0 0 15px rgba(153, 68, 230, 0.7); /* Button shadow on hover */
+    background: rgb(153, 68, 230); 
+    box-shadow: 0 0 15px rgba(153, 68, 230, 0.7); 
 }
 .position-relative {
     position: relative;

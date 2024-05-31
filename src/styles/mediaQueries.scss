@@ -128,17 +128,17 @@ $breakpoint-smaller-screens: 992px;
         }
     }
     .skills-container {
-        margin-top: 50px; /* Adjust margin for skills container */
+        margin-top: 50px; 
         p {
-            width: 100%; /* Override col-md-8 */
+            width: 100%; 
         }
     }
     .about-me-container {
-        margin-top: 20px; /* Adjust margin for about me container */
+        margin-top: 20px; 
     }
     .portfolio-photo {
         width: 100%;
-        height: auto; /* Ensure the portfolio photo adjusts automatically */
+        height: auto; 
     }
 }
 
@@ -163,7 +163,7 @@ $breakpoint-smaller-screens: 992px;
     }
     .skills-container {
         p {
-            width: 100%; /* Override col-md-8 */
+            width: 100%; 
         }
         .skills-section {
             flex-direction: column;
